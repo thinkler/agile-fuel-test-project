@@ -1,10 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Api::V1::RewardsController, type: :controller do
-  include Docs::V1::Reward::Api
-
   describe 'GET index' do
-    include Docs::V1::Reward::Index
 
     let(:user) { create(:user) }
 
