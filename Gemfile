@@ -19,9 +19,14 @@ gem 'turbolinks', '~> 5'
 gem 'bootsnap', '>= 1.1.0', require: false
 gem 'bootstrap-sass', '~> 3.3.7'
 gem 'kaminari'
+gem 'enumerize'
+gem 'jquery-rails'
+gem 'devise-bootstrap-views'
+gem 'rails-controller-testing'
+gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
-  gem 'byebug', platforms: %i[mri mingw x64_mingw]
+  gem 'pry'
 end
 
 group :development do
@@ -34,10 +39,9 @@ end
 group :test do
   gem 'factory_bot'
   gem 'rspec-rails'
-  gem 'rspec_api_documentation'
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'
-
+  gem 'database_cleaner'
   gem 'chromedriver-helper'
 end
 
