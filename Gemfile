@@ -24,6 +24,7 @@ gem 'jquery-rails'
 gem 'rails-controller-testing'
 gem 'rack-cors', :require => 'rack/cors'
 gem 'apipie-rails'
+gem "figaro"
 
 group :development, :test do
   gem 'pry'
