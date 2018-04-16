@@ -21,12 +21,12 @@ gem 'bootstrap-sass', '~> 3.3.7'
 gem 'kaminari'
 gem 'enumerize'
 gem 'jquery-rails'
-gem 'devise-bootstrap-views'
 gem 'rails-controller-testing'
 gem 'rack-cors', :require => 'rack/cors'
 
 group :development, :test do
   gem 'pry'
+  gem 'apipie-rails'
 end
 
 group :development do

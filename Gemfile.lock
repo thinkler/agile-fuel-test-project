@@ -49,6 +49,8 @@ GEM
       tzinfo (~> 1.1)
     addressable (2.5.2)
       public_suffix (>= 2.0.2, < 4.0)
+    apipie-rails (0.5.7)
+      rails (>= 4.1)
     archive-zip (0.11.0)
       io-like (~> 0.3.0)
     arel (9.0.0)
@@ -93,7 +95,6 @@ GEM
       railties (>= 4.1.0, < 6.0)
       responders
       warden (~> 1.2.3)
-    devise-bootstrap-views (0.0.11)
     devise_token_auth (0.1.43)
       devise (> 3.5.2, < 4.5)
       rails (< 6)
@@ -270,6 +271,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  apipie-rails
   bootsnap (>= 1.1.0)
   bootstrap-sass (~> 3.3.7)
   capybara (>= 2.15, < 4.0)
@@ -277,7 +279,6 @@ DEPENDENCIES
   coffee-rails (~> 4.2)
   database_cleaner
   devise
-  devise-bootstrap-views
   devise_token_auth
   enumerize
   factory_bot
