@@ -1,4 +1,4 @@
-module RewardHelpers
+module RewardsHelpers
   def sortable(column)
     title ||= column.titleize
 

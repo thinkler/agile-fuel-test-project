@@ -18,7 +18,9 @@ module Api
 
       api :GET, '/rewards', 'Returns all rewards with metadata'
       param :filter, String, "Set to filter by #{Reward::FILTERING_AVAILABLE} fields"
-      param :order, String, "Set to order by #{Reward::ORDERING_AVAILABLE} fields"
+      param :order, String,
+            "Set to order by #{Reward::ORDERING_AVAILABLE} fields. Put minus before ordering field \
+             to set ordering direction to :desc, default direction is :asc. Example: order=-id"
       param :page, :number, 'Set to select page'
       param :per_page, :number, 'Set to select records per page'
       meta meta: { total_count: 'Total rewards count',

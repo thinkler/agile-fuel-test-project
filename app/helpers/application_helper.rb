@@ -1,3 +1,3 @@
 module ApplicationHelper
-  include RewardHelpers
+  include RewardsHelpers
 end
