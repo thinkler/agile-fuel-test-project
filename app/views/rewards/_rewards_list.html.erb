@@ -1,0 +1,29 @@
+<div class="col-md-7 rewards">
+  <div class="text-center">
+    <%= paginate @rewards %>
+  </div>
+  <table class="table table-hover">
+    <thead>
+      <th><%= sortable 'id' %></th>
+      <th><%= sortable 'status' %></th>
+      <th>User email</th>
+    </thead>
+    <tbody>
+      <% @rewards.each do |rw| %>
+      <tr>
+        <td>
+          <%= rw.id %>
+        </td>
+        <td>
+          <%= format(rw.status) %>
+        </td>
+        <% if current_user %>
+        <td>
+          <%= rw.user.email %>
+        </td>
+        <% end %>
+      </tr>
+      <% end %>
+    </tbody>
+  </table>
+</div>

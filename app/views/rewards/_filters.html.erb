@@ -1,0 +1,9 @@
+<div class="col-md-2 rewards-filter">
+  <h4>Filters</h4>
+  <hr />
+  <%= link_to 'Reset Filters' %>
+  <% Reward.status.values.each do |status| %>
+      <hr>
+      <%= apply_status_filter(status) %>
+  <% end %>
+</div>
