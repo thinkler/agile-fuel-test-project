@@ -11,14 +11,14 @@ RSpec.describe Api::V1::RewardsController, type: :controller do
   describe 'GET index' do
     it 'returns filtered rewards' do
       get :index
-      expect(response_body.count).to eq(10)
+      expect(response_body[:rewards].count).to eq(10)
     end
   end
 
   describe 'GET show' do
     it 'returns last reward' do
       get :show, params: { id: Reward.last.id }
-      expect(response_body[:id]).to eq Reward.last.id
+      expect(response_body[:reward][:id]).to eq Reward.last.id
     end
   end
 end
