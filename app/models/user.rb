@@ -5,6 +5,7 @@ class User < ApplicationRecord
   include DeviseTokenAuth::Concerns::User
 
   validates :email, uniqueness: true
+  validates :name,  presence:   true
 
   has_many :rewards, dependent: :destroy
 end

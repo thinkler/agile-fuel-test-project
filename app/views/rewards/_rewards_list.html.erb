@@ -7,6 +7,7 @@
       <th><%= sortable 'id' %></th>
       <th><%= sortable 'status' %></th>
       <th>User email</th>
+      <th>User name</th>
     </thead>
     <tbody>
       <% @rewards.each do |rw| %>
@@ -17,11 +18,12 @@
         <td>
           <%= format(rw.status) %>
         </td>
-        <% if current_user %>
         <td>
           <%= rw.user.email %>
         </td>
-        <% end %>
+        <td>
+          <%= rw.user.name %>
+        </td>
       </tr>
       <% end %>
     </tbody>

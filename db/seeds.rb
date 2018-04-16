@@ -1,10 +1,10 @@
 User.delete_all
 Reward.delete_all
 
-User.create(email: 'admin@admin.com', password: 'foopass')
+User.create(name: 'Admin Name', email: 'admin@admin.com', password: 'foopass')
 
 3.times do |i|
-  User.create(email: "some#{i}@user.com", password: 'foopass')
+  User.create(name: 'Foo Name', email: "some#{i}@user.com", password: 'foopass')
 end
 
 50.times do
