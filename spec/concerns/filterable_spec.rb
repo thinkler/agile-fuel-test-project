@@ -5,8 +5,8 @@ RSpec.describe Filterable do
 
   before(:all) do
     @user = create(:user)
-    create_list(:reward, 10, status: 'redeemed')
     create_list(:reward, 5, status: 'approved')
+    create_list(:reward, 10, status: 'redeemed', user: @user)
     create_list(:reward, 5, status: 'approved', user: @user)
   end
 
@@ -14,12 +14,12 @@ RSpec.describe Filterable do
     context 'with valid params' do
       context 'with filters params' do
         let(:params) do
-          { status: 'approved', user_id: @user.id }
+          { status: 'approved,redeemed', user_id: @user.id }
         end
 
         it 'returns filtered collection' do
-          expect(collection.count).to eq(5)
-          expect(collection.pluck(:status)).to all be == 'approved'
+          expect(collection.count).to eq(15)
+          expect(collection.pluck(:status)).to include(/approved|redeemed/)
           expect(collection.pluck(:user_id)).to all be == @user.id
         end
       end

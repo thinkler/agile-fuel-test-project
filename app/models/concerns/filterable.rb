@@ -10,6 +10,7 @@ module Filterable
     private
 
     def filter_by(params)
+      params = params.each { |k, v| params[k] = v.to_s.split(',') }
       where(params)
     end
 

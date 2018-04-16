@@ -17,7 +17,9 @@ module Api
       end
 
       api :GET, '/rewards', 'Returns all rewards with metadata'
-      param :filter, String, "Set to filter by #{Reward::FILTERING_AVAILABLE} fields"
+      param :filter, String,
+            "Set to filter by #{Reward::FILTERING_AVAILABLE} fields. Add coma to filter by \
+            multiple values. Example: status=approved,redeem"
       param :order, String,
             "Set to order by #{Reward::ORDERING_AVAILABLE} fields. Put minus before ordering field \
              to set ordering direction to :desc, default direction is :asc. Example: order=-id"
