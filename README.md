@@ -7,13 +7,13 @@ https://rewards-list.herokuapp.com/users/sign_in
 
 Default user credentials:
 
-email: admin@admin.com
-password: foopass
+Email: `admin@admin.com` \
+Password: `foopass`
 
 ## Main features
 
 * Sign in, sign out, sign up, change password for users
-* Paginated list of rewards for authenticated
+* Paginated list of rewards for authenticated users
 * Filter by status
 * Order by status, id
 
