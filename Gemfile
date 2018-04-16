@@ -23,10 +23,10 @@ gem 'enumerize'
 gem 'jquery-rails'
 gem 'rails-controller-testing'
 gem 'rack-cors', :require => 'rack/cors'
+gem 'apipie-rails'
 
 group :development, :test do
   gem 'pry'
-  gem 'apipie-rails'
 end
 
 group :development do
